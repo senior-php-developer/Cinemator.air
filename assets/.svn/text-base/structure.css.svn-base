@@ -1,0 +1,120 @@
+@font-face {font-family: 'iconic';  src: local('☺'), url('font/iconic.ttf') format('truetype');}
+@font-face {font-family: 'hoefler'; src: local('☺'), url('font/hoefler.ttf') format('truetype');}
+
+.hide {display: none;}
+.lt {float: left;}
+.rt {float: right;}
+
+h1 {font-family: Georgia, Times; font-size: 24px;}
+h2 {font-family: Georgia, Times; font-size: 21px;}
+h3 {font-family: Georgia, Times; font-size: 16px; margin: 10px 3px;}
+
+input[type=button] {background: #ddd; border: 1px solid #aaa; border-radius: 2px; font-size: 12px;}
+input[type=button]:hover {background: #fff;}
+input {background: #EEE; border: 2px solid #888; padding: 3px; border-radius: 3px; color: #333;}
+
+/****** MAIN DOCUMENT *******/
+
+body {background: #161616; font-size: 13px; font-family: Arial; width: 540px; height: 690px;}
+.wrap {}
+
+
+/****** HEADER *******/
+
+#loader {position: absolute; top: 17px; right: 233px; display: none;}
+
+
+#search {margin: 10px 0 10px 10px;}
+#search .tools {font-family: iconic; color: #9DAE11; font-size: 26px; vertical-align: middle;}
+#search .tools a {margin: 0 5px; cursor: pointer;}
+#search .tools a:hover {color: #BED215;}
+
+#search input.search, #search button#go {float: right;}
+
+div.settings {background: #ddd; margin: 10px 0; padding: 10px; border-radius: 2px; position: absolute; width: 300px; z-index: 10; line-height: 26px; box-shadow: inset 0 0 2px #333; display: none;}
+
+#search input[type=radio] {position: relative; top: 3px; margin: 0 12px;}
+div.settings {font-size: 12px;}
+.settings span {font-family: Verdana;}
+.settings b {font-size: 13px; width: 80px; display: inline-block;}
+
+.option {overflow: hidden; position: relative;}
+.option b {width: 70px; display: inline-block; float: left;}
+
+.settings .slider {width: 140px; position: absolute; top: 10px; left: 108px;}
+.settings .start {float: left; font-size: 11px;}
+.settings .end {float: right; font-size: 11px;}
+
+.settings .limit {width: 30px; padding: 3px 6px; border: 1px solid #999; background: -webkit-linear-gradient(#eee,#ddd); border-radius: 4px; margin-left: 12px; margin-top: 4px;}
+.settings .genre {padding: 2px; margin-left: 10px; width: 130px; font-size: 12px;}
+
+.settings .save-filter {color: #888; padding: 2px 4px; text-decoration: none; cursor: pointer; margin: 0 10px; border-radius: 3px;}
+.settings .save-filter:hover {color: #444; background: #ddd;}
+
+
+
+/****** CONTAINER *******/
+#container {margin: 4px;}
+
+#kinobaza {max-height: 650px; overflow: auto; margin-top: 15px;}
+
+#kinobaza.grid .movie {float: left; width: 103px; height: 150px; position: relative; overflow: hidden;}
+#kinobaza.grid .poster img {width: 103px; height: 150px;}
+#kinobaza.grid .poster {cursor: pointer;}
+#kinobaza.grid .info {position: absolute; bottom: -50px; left: 0px; background: white; font-size: 10px; padding: 3px; width: 97px; overflow: hidden;}
+#kinobaza.grid .imdb {position: absolute; top:0; left:0; font-size: 11px; background:#111;color:#ddd; padding:3px;}
+
+#kinobaza.table .movie {overflow: hidden; margin-bottom: 10px;}
+#kinobaza.table .poster {float: left; cursor: pointer;}
+#kinobaza.table .poster img {width: 96px; height: 143px;}
+#kinobaza.table .info {float: right; width: 425px; height: 130px; position: relative;}
+
+#kinobaza h3 {color: #eeb; margin: 0 0 0 7px; cursor: pointer; white-space: nowrap;}
+
+#kinobaza hr {margin: 6px; border-top: 1px solid #440;}
+
+#kinobaza .descr {color: #BBB; margin: 5px 0 4px 8px; line-height: 15px; font-size: 11px; height: 90px; overflow: hidden; padding-right: 6px;}
+#kinobaza .misc {color: #DDD; font-size: 11px; position: absolute; right: 22px; font-family: Verdana;}
+
+
+/***** OVERVIEW  *******/
+
+#kinobaza .overview {border-bottom:1px solid #333; height: 150px; overflow: hidden;}
+#kinobaza .overview .poster {float: left;}
+#kinobaza .overview .poster img {width: 96px; height: 143px;}
+#kinobaza .overview .infox {float: right; width: 430px; height: auto; position: relative;}
+#kinobaza .overview .descr {overflow: auto;}
+#kinobaza .overview .tools {color: #DDD; font-size: 11px; position: absolute; right: 22px; font-family: Verdana;}
+#kinobaza .overview .tools .favor {font-size: 20px; font-family: iconic; cursor: pointer; color: #BED215;}
+
+#kinobaza .help {position: absolute; height: 50px; bottom: 50px; margin: 20px;}
+#kinobaza .help p {color: #888; line-height: 26px; font-size: 13px;}
+#kinobaza .help p a {color: #aa8; font-size: 13px; text-decoration: underline;}
+
+/****** FILTERS *******/
+.filters {overflow: hidden; margin: 10px;}
+.filters .lt, .filters .rt {width: 45%;}
+.filters a {color: #bba; display: block; margin: 8px 10px; padding-bottom: 7px; padding-left: 10px; border-bottom: 1px dashed; cursor: pointer; font-size: 12px;}
+.filters a:hover {color: #ccc;}
+
+#result {max-height: 195px; overflow: auto; width: 536px; margin: 5px 0; display: none;}
+#result div {float: left; width: 131px; height: 95px; margin: 0; border: 1px solid #222; position: relative; overflow: hidden; cursor: pointer; background: #111;}
+#result div img {width: 134px; height: 98px; margin-top: -2px; margin-left: -2px;}
+#result div span.descr {position: absolute; bottom: -80px; left: 0px; background: white; font-size: 10px; padding: 3px; width: 120px; overflow: hidden;}
+#result div span.dur {position: absolute; top: 0px; right: 0px; background: black; color: white; font-size: 10px; padding: 2px; font-family: Arial;}
+
+#video {margin: 5px 10px; border: 1px solid #222; width: 520px; display: none; position: absolute; bottom: 0px;}
+
+
+#sources {margin: 10px 0; max-height: 400px; overflow: auto; background: #222; padding: 15px 10px; border-radius: 5px; color: #aaa; display: none;}
+#sources h3 {margin: 0; margin-left: 5px; text-shadow: 0 0 1px #222;}
+#sources hr {display: block; height: 1px; border: 0; border-bottom: 1px solid #222; padding: 0; background: #555; margin: 6px 10px 1px 0;}
+#sources .list div {border-bottom: 1px dotted #666; padding: 5px; margin-right: 10px; cursor: pointer; line-height: 15px;}
+#sources .list div:hover {color: #eee;}
+/*************
+ * Scrollbars
+ *************/
+::-webkit-scrollbar {width: 8px; height: 8px; border-radius: 2px;  background: none;}
+::-webkit-scrollbar-track:vertical {     background: none; }
+::-webkit-scrollbar-thumb { width: 8px; height: 20px; background: #333;  border-radius: 2px;}
+::-webkit-scrollbar-button: { display: none; }

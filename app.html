@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<link rel=stylesheet href="assets/reset.css">
+	<link rel=stylesheet href="libs/jgrowl/jgrowl.css">
+	<link rel=stylesheet href="assets/structure.css">
+	<link rel=stylesheet href="assets/widgets.css">
+	<link rel=stylesheet href="libs/ui/jquery-ui-1.8.16.custom.css">
+	<link rel=stylesheet href="libs/alert/jquery.alerts.css">
+
+	<link rel="shortcut icon" href="assets/img/favicon.png"/> 
+	<title>Cinemator</title>
+</head>
+
+<body>
+	<div id="header" class="wrap">
+	    <div id="minimize"></div>
+	    <div id="loader"><img src="assets/img/loader.gif"></div>
+	</div>
+	<div id="container" class="wrap">
+        <div id="search">
+            <span class="tools">
+                <a class="home" title="Home screen">!</a><a title="Advanced search" class="settings">f</a><a class="favorites" title="My favorites">h</a><a title="change view" class="view">&gt;</a>
+            </span>
+            <button class="black" id="go">Go</button><input class="search" placeholder="Search here">
+            <div class="settings">
+                <div class="year option">
+                    <b>Year:</b> <span class="start">1990</span><div class="slider"></div><span class="end">2012</span>    
+                </div>
+                <div class="imdb option">
+                    <b>IMDB:</b> <span class="start">6</span><div class="slider"></div><span class="end">10</span>    
+                </div>               
+                <b>Genre:</b> 
+                <select class="genre">
+                    <option value="0">All genres</option>
+                    <option value="6">Action</option>
+                    <option value="7">Adventure</option>
+                    <option value="38">Anime</option>
+                    <option value="17">Biography</option>
+                    <option value="19">Cartoon</option>
+                    <option value="8">Comedy</option>
+                    <option value="13">Criminal</option>
+                    <option value="9">Detective</option>
+                    <option value="22">Documentary</option>
+                    <option value="1">Drama</option>
+                    <option value="10">Family</option>
+                    <option value="4">Fantasy</option>
+                    <option value="2">Historical</option>
+                    <option value="15">Horror</option>
+                    <option value="5">Sci-fi</option>
+                    <option value="23">Short</option>
+                    <option value="12">Thriller</option>
+                    <option value="3">War</option>
+                    <option value="16">Western</option>
+                </select><br>
+                <b>Sort:</b> <input type="radio" name="sort" rel="1" value="1" style="left: -3px" checked><span>IMDB</span> 
+                             <input type="radio" name="sort" rel="3" value="3"><span>Date</span><br>
+                <b>Limit:</b><input maxlength="4" type="text" class="limit" value="50">
+                <a class="save-filter">Save filter</a>
+                <button class="white" style="float: right">Show</button>
+            </div>
+        </div>
+        <div id="kinobaza"></div>
+        <div id="result"></div>
+        <div id="sources">
+		<h3>Select the source</h3>
+		<hr>
+		<div class="list"></div>
+		</div>
+	</div>
+<div class="hide">
+	<div id="dialog"></div>
+	<div id="dialog-confirm"></div>
+</div>
+
+<script type="application/x-shockwave-flash" src="libs/air/applicationupdater_ui.swf" />
+<script src="libs/air/AIRAliases.js"></script>
+<script src="assets/init.js"></script>
+<script src="libs/jquery.js"></script>
+<script src="libs/shuffle.js"></script>
+<script src="libs/jgrowl.js"></script>
+<script src="libs/php.js"></script>
+<script src="libs/postmessage.js"></script>
+<script src="libs/smoothscroll.js"></script>
+<script src="libs/ui/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="libs/alert/jquery.alerts.js"></script>
+<script src="assets/helpers.js"></script>
+<script src="assets/Cinemator.js"></script>
+<script src="assets/Vkontakte.js"></script>
+<script src="assets/Kinobaza.js"></script>
+<script src="assets/global.js"></script>
+</body>
+</html>
